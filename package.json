@@ -1,0 +1,20 @@
+{
+  "name": "intro-nightwatch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "debug": "node --inspect-brk node_modules/.bin/nightwatch",
+    "test": "nightwatch",
+    "test:browserstack": "nightwatch -c nightwatch.browserstack.conf.js",
+    "test:vrt": "nightwatch -c nightwatch.vrt.conf.js",
+    "consolidate:vrt": "CONSOLIDATE=1 npm run test:vrt",
+    "test:cucumber": "cucumber-js --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty"
+  },
+  "author": "Divya Mahajan",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^78.0.0",
+    "nightwatch": "^1.3.4"
+  }
+}
